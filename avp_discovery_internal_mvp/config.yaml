@@ -1,0 +1,22 @@
+# AVP Data Discovery Config (template)
+variables:
+  respondent_id:
+    label: "Respondent ID"
+    type: "id"
+    topic: "meta"
+    notes: "Internal linking key; never shown in public tier."
+  income_tier:
+    label: "Household income tier"
+    type: "categorical"
+    topic: "Economics"
+    question: "Which of the following best describes your household income level?"
+  stress_scale:
+    label: "Perceived Stress Scale (0-40)"
+    type: "numeric"
+    topic: "Health"
+    question: "Over the last month, how often have you felt stressed? (PSS composite)"
+  trust_neighbors:
+    label: "Trust in neighbors"
+    type: "categorical"
+    topic: "Trust"
+    question: "How much do you trust your neighbors?"
