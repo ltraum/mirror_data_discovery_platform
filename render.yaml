@@ -9,7 +9,7 @@ services:
 
     envVars:
       - key: PYTHON_VERSION
-        value: "3.10"
+        value: "3.10.14"
       - key: STREAMLIT_SERVER_HEADLESS
         value: "true"
       - key: STREAMLIT_SERVER_ENABLE_CORS
