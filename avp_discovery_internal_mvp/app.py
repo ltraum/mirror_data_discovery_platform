@@ -28,7 +28,7 @@ if "user_role" not in st.session_state:
 st.set_page_config(page_title="American Voices Project Data Discovery Dashboard", layout="wide")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH = os.path.join(BASE_DIR, "data", "example.csv")
+CSV_PATH = os.path.join(BASE_DIR, "example.csv")
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
 
 RESPONDENT_ID = "respondent_id"
