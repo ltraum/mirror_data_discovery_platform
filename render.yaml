@@ -29,4 +29,4 @@ services:
       - key: X-Frame-Options
         value: ALLOWALL
       - key: Content-Security-Policy
-        value: "frame-ancestors 'self' https://your-squarespace-domain.com"
+        value: "frame-ancestors 'self' https://shallot-marlin-ccxl.squarespace.com/data-discovery"
