@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: avp-discovery-app
+    env: python
+    plan: free                     # you can upgrade later if needed
+    region: oregon                 # or your closest region
+    buildCommand: "pip install -r avp_discovery_internal_mvp/requirements.txt"
+    startCommand: "streamlit run avp_discovery_internal_mvp/app.py --server.port 10000 --server.address 0.0.0.0"
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10"
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_SERVER_ENABLE_CORS
+        value: "false"
+      - key: STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION
+        value: "false"
+      - key: PORT
+        value: "10000"
+      - key: STREAMLIT_THEME_BASE
+        value: "light"
+      - key: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+        value: "false"
+      - key: STREAMLIT_SERVER_ENABLE_WEBBROWSER
+        value: "false"
+
+    headers:
+      - key: X-Frame-Options
+        value: ALLOWALL
+      - key: Content-Security-Policy
+        value: "frame-ancestors 'self' https://your-squarespace-domain.com"
