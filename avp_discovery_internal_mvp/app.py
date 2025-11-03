@@ -31,8 +31,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(BASE_DIR, "data", "example.csv")
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
 
-#CSV_PATH = "data/example.csv"
-#CONFIG_PATH = "config.yaml"
 RESPONDENT_ID = "respondent_id"
 
 MIN_CELL = 11
