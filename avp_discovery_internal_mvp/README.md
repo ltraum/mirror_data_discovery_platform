@@ -10,4 +10,4 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install streamlit pandas numpy scipy plotly pyyaml statsmodels
 
 # Run the app
-streamlit run app.py
+streamlit run new_app.py
