@@ -1,5 +1,5 @@
 # AVP Data Discovery MVP (Secure Enclave)
-# Run with: streamlit run app.py
+# Run with: streamlit run new_app.py
 
 import os
 import yaml
@@ -524,30 +524,23 @@ def page_about():
     # ----------------------------------
     with left:
         st.markdown("""
-        The **AVP Data Discovery Dashboard** is an orientation tool for the American Voices Project.  
-        Use it to get familiar with the dataset, spot variables of interest, and shape research ideas  
-        **before applying for secure-server access**.
-
-        This public version includes a limited set of **survey and demographic variables** that offer 
-        helpful context while maintaining strict privacy protections.
+        The **AVP Data Discovery Dashboard** is an orientation tool for becoming familiar with the survey and demographic elements of the AVP dataset, spot variables of interest, and shape research ideas **before applying for secure-server access**.
         """)
 
         st.markdown("---")
 
         st.markdown("### What You Can Do")
         st.markdown("""
-        - Browse the **codebook** and variable definitions  
-        - Explore the **76-variable simplified dataset**  
-        - Identify variables relevant to potential research questions  
+        - Search the **codebook** and variable definitions  
+        - Explore associations between variables 
+        - Identify variables relevant to potential future research
         """)
 
         st.markdown("---")
 
         st.markdown("### Privacy & Disclosure")
         st.markdown("""
-        This dashboard displays **only aggregated information** to protect respondent confidentiality.  
-        No individual-level data are available. Researchers needing deeper access may apply for 
-        **secure-server use** under established safeguards.
+        This dashboard displays **only aggregated information** to protect respondent confidentiality. No individual-level data are available. Researchers needing deeper access may apply for **secure-server use** under established safeguards.
         """)
 
     # ----------------------------------
@@ -641,6 +634,10 @@ if st.session_state["user_role"] == "admin":
     pages["System"].append(
         st.Page(page_audit_log, title="Audit Log", icon="🧾")
     )
+
+pg = st.navigation(pages, position="sidebar", expanded=True)
+pg.run()
+
 
 pg = st.navigation(pages, position="sidebar", expanded=True)
 pg.run()
